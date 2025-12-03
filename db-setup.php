@@ -10,9 +10,13 @@ $dbname="your_dbname";
 $db_handle = new mysqli($hostname, $username, $password, $dbname);
 
 if (!mysqli_connect_error()) {
-    $db_init_check = $db_handle->query("SELECT isinitialized AS _isinit FROM setupcheck");
-    $db_init_check_read = $db_init_check->fetch_assoc();
-    $db_check = $db_init_check_read["_isinit"];
+    try {
+      $db_init_check = $db_handle->query("SELECT isinitialized AS _isinit FROM setupcheck");
+      $db_init_check_read = $db_init_check->fetch_assoc();
+      $db_check = $db_init_check_read["_isinit"];
+    } catch {
+        $db_check = 0;
+    }
     if (!$db_check == 1) {
       $db_init = $db_handle->query("CREATE TABLE IF NOT EXISTS `setupcheck` (`isinitialized` INT(1) NOT NULL) ENGINE = InnoDB; INSERT INTO `setupcheck` (`isinitialized`) VALUES (1)");
       $table_setup = $db_handle->query("CREATE TABLE IF NOT EXISTS `stats` (`hits` INT(255) NOT NULL , `misses` INT(255) NOT NULL ) ENGINE = InnoDB;");
