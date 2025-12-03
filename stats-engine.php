@@ -16,7 +16,7 @@ if (!mysqli_connect_error()) {
     break;
   }
   echo "<br><br>Hits: $hits<br><br>Misses: $misses";
-  $update_stats = $db_handle->query("INSERT INTO Table (stats) VALUES ($hits, $misses)");
+  $update_stats = $db_handle->query("INSERT INTO Table `stats` (`hits`, `misses`) VALUES ($hits, $misses)");
 }
 
 ?>
