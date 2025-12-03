@@ -1,6 +1,6 @@
 <?php
 
-include("db-setup.php");
+include ("db-setup.php");
 
 if (!mysqli_connect_error()) {
   $read_stats_hits = $db_handle->query("SELECT hits AS _hits FROM stats");
