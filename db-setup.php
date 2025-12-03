@@ -10,7 +10,7 @@ $dbname="your_dbname";
 $db_handle = new mysqli($hostname, $username, $password, $dbname);
 
 if (!mysqli_connect_error()) {
-  $table_setup = $db_handle->query("CREATE TABLE IF NOT EXISTS `russianroulette`.`stats` (`hits` INT(0) NOT NULL , `misses` INT(0) NOT NULL ) ENGINE = InnoDB;");
+  $table_setup = $db_handle->query("CREATE TABLE IF NOT EXISTS `stats` (`hits` INT(0) NOT NULL , `misses` INT(0) NOT NULL ) ENGINE = InnoDB;");
 }
 
 ?>
