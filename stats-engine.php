@@ -9,12 +9,6 @@ if (!mysqli_connect_error()) {
   $misses_read = $read_stats_misses->fetch_assoc();
   $hits = $hits_read["_hits"];
   $misses = $misses_read["_misses"];
-  if (empty($hits)) {
-    $hits = "0";
-  }
-  if (empty($misses)) {
-    $misses = "0";
-  }
   switch ($event) {
     case "hit":
       $hits++;
