@@ -44,9 +44,12 @@
               if ($bullet_pos == $user_chamber) {
                 echo "BOOM!<br>(bullet was in chamber \"$bullet_pos\")";
                 echo "<audio autoplay src=\"boom.mp3\"></audio>";
+                $event = "hit";
               } else {
                 echo "You made it bro :-)<br>(bullet was in chamber \"$bullet_pos\")";
+                $event = "miss";
               }
+              include ("stats-engine.php");
             } else {
               echo "Invalid Chamber";
             }
