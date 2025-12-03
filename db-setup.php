@@ -14,7 +14,7 @@ if (!mysqli_connect_error()) {
       $db_init_check = $db_handle->query("SELECT isinitialized AS _isinit FROM setupcheck");
       $db_init_check_read = $db_init_check->fetch_assoc();
       $db_check = $db_init_check_read["_isinit"];
-    } catch {
+    } catch (Exception $e) {
         $db_check = 0;
     }
     if (!$db_check == 1) {
