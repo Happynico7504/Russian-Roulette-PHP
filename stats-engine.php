@@ -9,10 +9,10 @@ if (!mysqli_connect_error()) {
   $misses = $read_stats_misses->fetch_assoc();
   switch ($event) {
     case hit:
-      $hits++
+      $hits++;
     break;
     case miss:
-      $misses++
+      $misses++;
     break;
   }
   echo "<br><br>Hits: $hits<br><br>Misses: $misses";
