@@ -18,8 +18,9 @@ if (!mysqli_connect_error()) {
         $db_check = 0;
     }
     if (!$db_check == 1) {
-      $db_init = $db_handle->query("CREATE TABLE IF NOT EXISTS `setupcheck` (`isinitialized` INT(1) NOT NULL) ENGINE = InnoDB; INSERT INTO `setupcheck` (`isinitialized`) VALUES (1)");
+      $db_init = $db_handle->query("CREATE TABLE IF NOT EXISTS `setupcheck` (`isinitialized` INT(1) NOT NULL) ENGINE = InnoDB;");
       $table_setup = $db_handle->query("CREATE TABLE IF NOT EXISTS `stats` (`hits` INT(255) NOT NULL , `misses` INT(255) NOT NULL ) ENGINE = InnoDB;");
+      $db_init_complete = $db_handle->query("INSERT INTO `setupcheck` (`isinitialized`) VALUES ('1')");
     }
 }
 
