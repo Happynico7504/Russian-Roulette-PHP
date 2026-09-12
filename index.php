@@ -60,7 +60,7 @@ header('Cache-Control: no-cache');
               $bullet_pos = rand(1,16);
               if ($bullet_pos == $user_chamber) {
                 echo "BOOM!<br>(bullet was in chamber \"$bullet_pos\")";
-                echo "<audio autoplay src=\"boom.mp3\"></audio>";
+                echo "<audio autoplay src=\"boom.mp3\"><script>alert(\"BOOM!!!\");</script></audio>";
                 $event = "hit";
               } else {
                 echo "You made it bro :-)<br>(bullet was in chamber \"$bullet_pos\")";
