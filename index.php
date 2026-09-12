@@ -7,6 +7,17 @@ header('Cache-Control: no-cache');
 <!doctype html>
   <html>
     <head>
+      <style>
+        .chamber-btn {
+        font-size: 64px;
+        color: #ff0000;
+        background-color: #0000ff;
+        width: 128px;
+        height: 128px;
+        box-sizing: border-box;
+        padding: 0;
+        }
+      </style>
       <title>Russian Roulette</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -16,28 +27,28 @@ header('Cache-Control: no-cache');
         <br>
         <table>
           <tr>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=1';">01</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=2';">02</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=3';">03</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=4';">04</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=1';">01</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=2';">02</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=1';">03</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=4';">04</button></td>
           </tr>
           <tr>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=5';">05</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=6';">06</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=7';">07</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=8';">08</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=5';">05</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=6';">06</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=7';">07</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=8';">08</button></td>
           </tr>
           <tr>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=9';">09</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=10';">10</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=11';">11</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=12';">12</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=9';">09</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=10';">10</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=11';">11</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=12';">12</button></td>
           </tr>
           <tr>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=13';">13</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=14';">14</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=15';">15</button></td>
-            <td><button style="font-size:64px;color:#ff0000;background-color:#0000ff;" onclick="location.href='index.php?my_chamber=16';">16</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=13';">13</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=14';">14</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=15';">15</button></td>
+            <td><button class="chamber-btn" onclick="location.href='index.php?my_chamber=16';">16</button></td>
           </tr>
         </table>
         <br>
